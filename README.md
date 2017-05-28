@@ -1,24 +1,6 @@
-# README
+Exercise from this tutorial: https://www.sitepoint.com/building-apis-ruby-rails-graphql/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+There are two bugs in the original tutorial:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. You have to use this command `$ rails g migration CreateActorsMovies actor movie` instead of this one `$ rails g migration CreateActorsMovies` to properly set up the join table.
+2. You have to add a `get '/movies', to: 'movies#query'` in the `routes.rb` file.
