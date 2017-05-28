@@ -16,4 +16,5 @@ QueryType = GraphQL::ObjectType.define do
     resolve lambda { |obj, args, ctx|
       Actor.find(args[:id])
     }
+  end
 end
